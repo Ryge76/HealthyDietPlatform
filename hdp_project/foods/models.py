@@ -3,7 +3,6 @@
 from django.db import models
 
 
-# Create your models here.
 class Products(models.Model):
     product_name = models.TextField
     category = models.ForeignKey('Categories', on_delete=models.CASCADE)
@@ -24,6 +23,3 @@ class Categories(models.Model):
 
     def __str__(self):
         return self.categ_name
-
-
-
