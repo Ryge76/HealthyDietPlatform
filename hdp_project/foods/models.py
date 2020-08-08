@@ -1,3 +1,5 @@
+"""Define models needed for foods representation."""
+
 from django.db import models
 
 
@@ -13,16 +15,15 @@ class Products(models.Model):
     url = models.URLField
     image_url = models.URLField
 
+    def __str__(self):
+        return self.product_name
 
-class Categoriesgit(models.Model):
+
+class Categories(models.Model):
     categ_name = models.CharField(max_length=50)
 
+    def __str__(self):
+        return self.categ_name
 
 
-"""
-    categories = ['fruits', 'legumes-et-derives', 'produits-laitiers',
-                  'viandes', 'poissons', 'boissons',
-                  'aliments-et-boissons-a-base-de-vegetaux', 'petit-dejeuners',
-                  'snacks']
-"""
 
